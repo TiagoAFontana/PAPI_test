@@ -1,0 +1,18 @@
+Escrevendo 1'000'000x no vetor aleatoriamente (compilação sem otimizações "-o0")
+PAPI_L1_DCM 879991
+PAPI_L1_ICM 169
+PAPI_L1_TCM 880160
+PAPI_L2_DCM 175098
+PAPI_L2_ICM 138
+PAPI_L2_TCM 175236
+PAPI_L3_TCM 76
+
+Lendo 1'000'000x no vetor aleatoriamente (compilação sem otimizações "-o0")
+PAPI_L1_DCM 249
+PAPI_L1_ICM 207
+PAPI_L1_TCM 456
+PAPI_L2_DCM 98
+PAPI_L2_ICM 134
+PAPI_L2_TCM 232
+PAPI_L3_TCM 75
+
