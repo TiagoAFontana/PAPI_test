@@ -25,6 +25,11 @@ public:
 private:
     pair<double, double> position;
     double nome;
+    long long a;
+    long long b;
+    long long c;
+    long long d;
+    long long e;
 };
 
 
@@ -69,9 +74,10 @@ void write_all_objects(vector<Register> &registers, int iterations){
 
 
 
-#define NUMBER_OBJECTS 16000
-#define ITERATIONS 1000
+#define NUMBER_OBJECTS 870000
+#define ITERATIONS 1
 #define READ_TEST 1
+#define WRITE_TEST 0
 main()
 {
     string PAPI_events_str[] = {
@@ -159,7 +165,8 @@ main()
     }
     std::cout<<std::endl;
 
-#else
+#endif
+#if WRITE_TEST
     //---------WRITE-----------
     cout<<"\n\nWrite test\n"<<endl;
 
@@ -171,7 +178,8 @@ main()
     CALLGRIND_ZERO_STATS;
     CALLGRIND_START_INSTRUMENTATION;
 
-    write_objects(registers, ITERATIONS);
+//    write_objects(registers, ITERATIONS);
+    write_all_objects(registers, ITERATIONS);
 
     CALLGRIND_DUMP_STATS;
     CALLGRIND_STOP_INSTRUMENTATION;

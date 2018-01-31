@@ -13,6 +13,12 @@ int cache_random_write_test(double *array, int size, int count) {
 
     for(i=0; i<count; i++)
     {
+        array[rand()%size]=(double)i;
+    }
+
+
+    for(i=0; i<count; i++)
+    {
         for(int index=0; index<size; index++)
         {
             array[index]=(double)i;
